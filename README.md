@@ -18,7 +18,8 @@ Crie um arquivo `.env` na raiz do projeto e configure as variáveis de ambiente:
 ```ini
 JIRA_USERNAME=seu_usuario
 JIRA_TOKEN=seu_token
-JIRA_URL=https://seu_jira.atlassian.net/rest/api/2/search
+JIRA_URL=https://seu_jira.atlassian.net/rest/api/3/search
+JIRA_FIELDS=issuetype,priority,key,status,summary,reporter,assignee,created,updated
 MONGO_URL=mongodb://seu_mongo
 ```
 
@@ -26,7 +27,7 @@ MONGO_URL=mongodb://seu_mongo
 
 1. Clone este repositório:
    ```sh
-   git clone https://github.com/seu-repositorio/jira-crawler.git
+   git clone https://github.com/LoboPedro/jira-crawler.git
    ```
 2. Acesse a pasta do projeto:
    ```sh
@@ -50,7 +51,7 @@ MONGO_URL=mongodb://seu_mongo
 Para rodar o projeto manualmente:
 
 ```sh
-node index.js
+node jira-crawler.js
 ```
 
 ## Estrutura do Código
